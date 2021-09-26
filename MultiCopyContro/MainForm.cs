@@ -119,7 +119,14 @@ namespace MultiCopyContro
 
         void DestinationCheckedListBoxItemCheck(object sender, ItemCheckEventArgs e)
         {
+            // Prevent hangilng by initial checking 
+            if (this.checkingDestinatinCheckedListBox)
+            {
+                return;
+            }
 
+            // Update count
+            this.destinationCountToolStripStatusLabel.Text = $"{this.destinationCheckedListBox.CheckedItems.Count + (e.NewValue == CheckState.Checked ? 1 : -1)}/{this.destinationCheckedListBox.Items.Count}";
         }
 
         void CopyButtonClick(object sender, EventArgs e)
