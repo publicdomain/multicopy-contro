@@ -21,7 +21,14 @@ namespace MultiCopyContro
 
         void BrowseButtonClick(object sender, EventArgs e)
         {
+            this.folderBrowserDialog.SelectedPath = string.Empty;
 
+            if (this.folderBrowserDialog.ShowDialog() == DialogResult.OK && this.folderBrowserDialog.SelectedPath.Length > 0)
+            {
+                this.sourceCheckedListBox.Items.AddRange(Directory.GetFiles(this.folderBrowserDialog.SelectedPath, this.filePatternTextBox.Text, SearchOption.TopDirectoryOnly));
+
+                this.sourcerCountToolStripStatusLabel.Text = $"0/{this.sourceCheckedListBox.Items.Count}";
+            }
         }
 
         void SourceCheckedListBoxItemCheck(object sender, ItemCheckEventArgs e)
