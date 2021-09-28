@@ -145,7 +145,6 @@ namespace MultiCopyContro
                         // Copy
                         File.Copy(destinationItem.Tag.ToString(), destinationItem.Text, this.overwriteFilesToolStripMenuItem.Checked);
                     }
-                    catch (Exception ex)
                     {
                         // TODO Log or act upon it
                     }
@@ -157,11 +156,6 @@ namespace MultiCopyContro
         }
 
         void NewToolStripMenuItemClick(object sender, EventArgs e)
-        {
-
-        }
-
-        void ExitToolStripMenuItemClick(object sender, EventArgs e)
         {
 
         }
@@ -196,6 +190,12 @@ namespace MultiCopyContro
         void AboutToolStripMenuItemClick(object sender, EventArgs e)
         {
 
+        }
+
+        void ExitToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            // Close program
+            this.Close();
         }
     }
 }
