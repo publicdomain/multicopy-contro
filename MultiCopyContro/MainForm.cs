@@ -194,7 +194,8 @@ namespace MultiCopyContro
 
         void OriginalThreadDonationCodercomToolStripMenuItemClick(object sender, EventArgs e)
         {
-
+            // Open original thread
+            Process.Start("https://www.donationcoder.com/forum/index.php?topic=51778.0");
         }
 
         void SourceCodeGithubcomToolStripMenuItemClick(object sender, EventArgs e)
