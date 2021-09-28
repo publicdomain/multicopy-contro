@@ -5,6 +5,7 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using System.Linq;
+using System.Diagnostics;
 
 namespace MultiCopyContro
 {
@@ -28,7 +29,9 @@ namespace MultiCopyContro
         {
             this.ProcessNew();
 
-            if (this.folderBrowserDialog.ShowDialog() == DialogResult.OK && this.folderBrowserDialog.SelectedPath.Length > 0)
+            this.folderBrowserDialog.ShowDialog();
+
+            if (this.folderBrowserDialog.SelectedPath.Length > 0)
             {
                 this.sourceCheckedListBox.Items.AddRange(Directory.GetFiles(this.folderBrowserDialog.SelectedPath, this.filePatternTextBox.Text, SearchOption.TopDirectoryOnly));
 
@@ -148,6 +151,7 @@ namespace MultiCopyContro
                     catch
                     {
                         // TODO Log or act upon it
+                        ;
                     }
                 }
 
@@ -184,7 +188,8 @@ namespace MultiCopyContro
 
         void WeeklyReleasesPublicDomainWeeklycomToolStripMenuItemClick(object sender, EventArgs e)
         {
-
+            // Open our public domain website
+            Process.Start("https://publicdomainweekly.com");
         }
 
         void OriginalThreadDonationCodercomToolStripMenuItemClick(object sender, EventArgs e)
