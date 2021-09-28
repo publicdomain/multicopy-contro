@@ -200,7 +200,8 @@ namespace MultiCopyContro
 
         void SourceCodeGithubcomToolStripMenuItemClick(object sender, EventArgs e)
         {
-
+            // Open GitHub repository
+            Process.Start("https://github.com/publicdomain/multicopy-contro");
         }
 
         void AboutToolStripMenuItemClick(object sender, EventArgs e)
