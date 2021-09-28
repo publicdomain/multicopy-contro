@@ -26,7 +26,7 @@ namespace MultiCopyContro
 
         void BrowseButtonClick(object sender, EventArgs e)
         {
-            this.folderBrowserDialog.SelectedPath = string.Empty;
+            this.ProcessNew();
 
             if (this.folderBrowserDialog.ShowDialog() == DialogResult.OK && this.folderBrowserDialog.SelectedPath.Length > 0)
             {
@@ -145,6 +145,7 @@ namespace MultiCopyContro
                         // Copy
                         File.Copy(destinationItem.Tag.ToString(), destinationItem.Text, this.overwriteFilesToolStripMenuItem.Checked);
                     }
+                    catch
                     {
                         // TODO Log or act upon it
                     }
@@ -157,7 +158,16 @@ namespace MultiCopyContro
 
         void NewToolStripMenuItemClick(object sender, EventArgs e)
         {
+            this.ProcessNew();
+        }
 
+        void ProcessNew()
+        {
+            this.folderBrowserDialog.SelectedPath = string.Empty;
+
+            this.sourceCheckedListBox.Items.Clear();
+
+            this.destinationCheckedListBox.Items.Clear();
         }
 
         void OptionsToolStripMenuItemDropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
