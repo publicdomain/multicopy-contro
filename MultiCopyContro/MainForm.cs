@@ -91,7 +91,12 @@ namespace MultiCopyContro
                             // Add to destionation list
                             foreach (var sourceFile in sourceFileList)
                             {
-                                this.destinationCheckedListBox.Items.Add(Path.Combine(compoDirectory, Path.GetFileName(sourceFile)));
+                                ListViewItem destItem = new ListViewItem(Path.Combine(compoDirectory, Path.GetFileName(sourceFile)))
+                                {
+                                    Tag = sourceFile
+                                };
+
+                                this.destinationCheckedListBox.Items.Add(destItem);
                             }
                         }
                     }
@@ -113,8 +118,8 @@ namespace MultiCopyContro
             // End update
             this.destinationCheckedListBox.EndUpdate();
 
-            // Update status
-            this.destinationCountToolStripStatusLabel.Text = $"0/{this.destinationCheckedListBox.Items.Count}";
+            // Update count
+            this.destinationCountToolStripStatusLabel.Text = $"{this.destinationCheckedListBox.CheckedItems.Count}/{this.destinationCheckedListBox.Items.Count}";
         }
 
         void DestinationCheckedListBoxItemCheck(object sender, ItemCheckEventArgs e)
@@ -131,7 +136,24 @@ namespace MultiCopyContro
 
         void CopyButtonClick(object sender, EventArgs e)
         {
+            if (this.destinationCheckedListBox.CheckedItems.Count > 0)
+            {
+                foreach (ListViewItem destinationItem in this.destinationCheckedListBox.CheckedItems)
+                {
+                    try
+                    {
+                        // Copy
+                        File.Copy(destinationItem.Tag.ToString(), destinationItem.Text, this.overwriteFilesToolStripMenuItem.Checked);
+                    }
+                    catch (Exception ex)
+                    {
+                        // TODO Log or act upon it
+                    }
+                }
 
+                // Advise user
+                MessageBox.Show($"{this.destinationCheckedListBox.CheckedItems.Count} checked items processed.", "Copy executed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         void NewToolStripMenuItemClick(object sender, EventArgs e)
