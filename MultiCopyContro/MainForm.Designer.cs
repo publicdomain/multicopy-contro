@@ -38,6 +38,7 @@ namespace MultiCopyContro
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.alwaysOnTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.overwriteFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.weeklyReleasesPublicDomainWeeklycomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.originalThreadDonationCodercomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,7 +62,6 @@ namespace MultiCopyContro
 			this.filePatternTextBox = new System.Windows.Forms.TextBox();
 			this.folderPatternTextBox = new System.Windows.Forms.TextBox();
 			this.filePatternLabel = new System.Windows.Forms.Label();
-			this.overwriteFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.mainMenuStrip.SuspendLayout();
 			this.mainStatusStrip.SuspendLayout();
 			this.mainTableLayoutPanel.SuspendLayout();
@@ -131,8 +131,14 @@ namespace MultiCopyContro
 			// alwaysOnTopToolStripMenuItem
 			// 
 			this.alwaysOnTopToolStripMenuItem.Name = "alwaysOnTopToolStripMenuItem";
-			this.alwaysOnTopToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.alwaysOnTopToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
 			this.alwaysOnTopToolStripMenuItem.Text = "&Always on top";
+			// 
+			// overwriteFilesToolStripMenuItem
+			// 
+			this.overwriteFilesToolStripMenuItem.Name = "overwriteFilesToolStripMenuItem";
+			this.overwriteFilesToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+			this.overwriteFilesToolStripMenuItem.Text = "&Overwrite files";
 			// 
 			// helpToolStripMenuItem
 			// 
@@ -367,12 +373,6 @@ namespace MultiCopyContro
 			this.filePatternLabel.TabIndex = 9;
 			this.filePatternLabel.Text = "F&older pattern:";
 			this.filePatternLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// overwriteFilesToolStripMenuItem
-			// 
-			this.overwriteFilesToolStripMenuItem.Name = "overwriteFilesToolStripMenuItem";
-			this.overwriteFilesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-			this.overwriteFilesToolStripMenuItem.Text = "&Overwrite files";
 			// 
 			// MainForm
 			// 
