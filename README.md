@@ -31,7 +31,7 @@ Day #272, Week #39 @ September 29, 2021
 * *Raster d.o.o.*
 * *Your name here*? :)
 
-Support our Public Domain project in the form of a Donation via Paypal @ [www.paypal.me/victorvls](https://www.paypal.me/victorvls) or by becoming a Patron @ [www.patreon.com/publicdomain](https://www.patreon.com/publicdomain).
+Support our Public Domain project in the form of a Donation via Paypal @ [www.paypal.com/paypalme/victorvls](https://www.paypal.com/paypalme/victorvls) or by becoming a Patron @ [www.patreon.com/publicdomain](https://www.patreon.com/publicdomain).
 
 Thanks & keep on rocking!
 
