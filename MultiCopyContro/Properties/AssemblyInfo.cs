@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("MultiCopyContro")]
-[assembly: AssemblyDescription("Custom versionof Multicopy for user Contro.")]
+[assembly: AssemblyDescription("Custom version of Multicopy for user Contro.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("PublicDomainWeekly.com")]
 [assembly: AssemblyProduct("MultiCopyContro")]
