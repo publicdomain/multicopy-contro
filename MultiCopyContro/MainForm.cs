@@ -304,7 +304,7 @@ namespace MultiCopyContro
             var aboutForm = new AboutForm(
                 $"About {programTitle}",
                 $"{programTitle} {version.Major}.{version.Minor}.{version.Build}",
-                $"Made for: Contro{Environment.NewLine}DonationCoder.com{Environment.NewLine}Day #342, Week #49 @ December 08, 2021",
+                $"Made for: Contro{Environment.NewLine}DonationCoder.com{Environment.NewLine}Day #343, Week #49 @ December 09, 2021",
                 licenseText,
                 this.Icon.ToBitmap())
             {
