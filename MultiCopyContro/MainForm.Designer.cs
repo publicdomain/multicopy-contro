@@ -39,6 +39,7 @@ namespace MultiCopyContro
 			this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.alwaysOnTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.overwriteFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.backupOnOverwriteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.weeklyReleasesPublicDomainWeeklycomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.originalThreadDonationCodercomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -122,7 +123,8 @@ namespace MultiCopyContro
 			// 
 			this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
 									this.alwaysOnTopToolStripMenuItem,
-									this.overwriteFilesToolStripMenuItem});
+									this.overwriteFilesToolStripMenuItem,
+									this.backupOnOverwriteToolStripMenuItem});
 			this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
 			this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
 			this.optionsToolStripMenuItem.Text = "&Options";
@@ -131,14 +133,24 @@ namespace MultiCopyContro
 			// alwaysOnTopToolStripMenuItem
 			// 
 			this.alwaysOnTopToolStripMenuItem.Name = "alwaysOnTopToolStripMenuItem";
-			this.alwaysOnTopToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+			this.alwaysOnTopToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
 			this.alwaysOnTopToolStripMenuItem.Text = "&Always on top";
 			// 
 			// overwriteFilesToolStripMenuItem
 			// 
+			this.overwriteFilesToolStripMenuItem.Checked = true;
+			this.overwriteFilesToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
 			this.overwriteFilesToolStripMenuItem.Name = "overwriteFilesToolStripMenuItem";
-			this.overwriteFilesToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+			this.overwriteFilesToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
 			this.overwriteFilesToolStripMenuItem.Text = "&Overwrite files";
+			// 
+			// backupOnOverwriteToolStripMenuItem
+			// 
+			this.backupOnOverwriteToolStripMenuItem.Checked = true;
+			this.backupOnOverwriteToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.backupOnOverwriteToolStripMenuItem.Name = "backupOnOverwriteToolStripMenuItem";
+			this.backupOnOverwriteToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+			this.backupOnOverwriteToolStripMenuItem.Text = "&Backup on overwrite";
 			// 
 			// helpToolStripMenuItem
 			// 
@@ -155,15 +167,15 @@ namespace MultiCopyContro
 			// weeklyReleasesPublicDomainWeeklycomToolStripMenuItem
 			// 
 			this.weeklyReleasesPublicDomainWeeklycomToolStripMenuItem.Name = "weeklyReleasesPublicDomainWeeklycomToolStripMenuItem";
-			this.weeklyReleasesPublicDomainWeeklycomToolStripMenuItem.Size = new System.Drawing.Size(313, 22);
-			this.weeklyReleasesPublicDomainWeeklycomToolStripMenuItem.Text = "&Weekly releases @ PublicDomainWeekly.com";
+			this.weeklyReleasesPublicDomainWeeklycomToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
+			this.weeklyReleasesPublicDomainWeeklycomToolStripMenuItem.Text = "&Free Releases @ PublicDomain.is";
 			this.weeklyReleasesPublicDomainWeeklycomToolStripMenuItem.Click += new System.EventHandler(this.WeeklyReleasesPublicDomainWeeklycomToolStripMenuItemClick);
 			// 
 			// originalThreadDonationCodercomToolStripMenuItem
 			// 
 			this.originalThreadDonationCodercomToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("originalThreadDonationCodercomToolStripMenuItem.Image")));
 			this.originalThreadDonationCodercomToolStripMenuItem.Name = "originalThreadDonationCodercomToolStripMenuItem";
-			this.originalThreadDonationCodercomToolStripMenuItem.Size = new System.Drawing.Size(313, 22);
+			this.originalThreadDonationCodercomToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
 			this.originalThreadDonationCodercomToolStripMenuItem.Text = "&Original thread @ DonationCoder.com";
 			this.originalThreadDonationCodercomToolStripMenuItem.Click += new System.EventHandler(this.OriginalThreadDonationCodercomToolStripMenuItemClick);
 			// 
@@ -171,19 +183,19 @@ namespace MultiCopyContro
 			// 
 			this.sourceCodeGithubcomToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sourceCodeGithubcomToolStripMenuItem.Image")));
 			this.sourceCodeGithubcomToolStripMenuItem.Name = "sourceCodeGithubcomToolStripMenuItem";
-			this.sourceCodeGithubcomToolStripMenuItem.Size = new System.Drawing.Size(313, 22);
-			this.sourceCodeGithubcomToolStripMenuItem.Text = "Source code @ Github.com";
+			this.sourceCodeGithubcomToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
+			this.sourceCodeGithubcomToolStripMenuItem.Text = "&Source code @ Github.com";
 			this.sourceCodeGithubcomToolStripMenuItem.Click += new System.EventHandler(this.SourceCodeGithubcomToolStripMenuItemClick);
 			// 
 			// toolStripSeparator2
 			// 
 			this.toolStripSeparator2.Name = "toolStripSeparator2";
-			this.toolStripSeparator2.Size = new System.Drawing.Size(310, 6);
+			this.toolStripSeparator2.Size = new System.Drawing.Size(275, 6);
 			// 
 			// aboutToolStripMenuItem
 			// 
 			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(313, 22);
+			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
 			this.aboutToolStripMenuItem.Text = "&About...";
 			this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItemClick);
 			// 
@@ -395,6 +407,7 @@ namespace MultiCopyContro
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.ToolStripMenuItem backupOnOverwriteToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem overwriteFilesToolStripMenuItem;
 		private System.Windows.Forms.Label filePatternLabel;
 		private System.Windows.Forms.TextBox folderPatternTextBox;

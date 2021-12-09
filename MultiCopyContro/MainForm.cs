@@ -164,8 +164,54 @@ namespace MultiCopyContro
                 {
                     try
                     {
-                        // Copy
-                        File.Copy(destinationItem.Tag.ToString(), destinationItem.Text, this.overwriteFilesToolStripMenuItem.Checked);
+                        /* Copy */
+
+                        var sourceFile = destinationItem.Tag.ToString();
+                        var destinationFile = destinationItem.Text;
+
+                        // Check if file exists
+                        if (File.Exists(destinationFile))
+                        {
+                            // Check if must overwrite
+                            if (this.overwriteFilesToolStripMenuItem.Checked)
+                            {
+                                // set now
+                                var now = DateTime.Now;
+
+                                // Check if source is newer
+                                if (File.GetLastWriteTimeUtc(sourceFile) > File.GetLastWriteTimeUtc(destinationFile))
+
+                                    // Check if must backup
+                                    if (this.backupOnOverwriteToolStripMenuItem.Checked)
+                                    {
+                                        // Set destination directory
+                                        string destinationDirectory = Path.GetDirectoryName(destinationFile);
+
+                                        // Set backups directory
+                                        string backupDirectory = Path.Combine(destinationDirectory, "Backups", now.ToString("yyyy-MM-dd"));
+
+                                        // Create "Backups" directory
+                                        Directory.CreateDirectory(backupDirectory);
+
+                                        // Create timestamped backup directory for destination file
+                                        string timestampedDirectory = Path.Combine(backupDirectory, now.ToString("yyyy-MM-dd_HH-mm-ss_fffffff"));
+
+                                        // Create timestamped destination directory
+                                        Directory.CreateDirectory(timestampedDirectory);
+
+                                        // TODO Copy file to timestamped backup folder [Can be refactored for a move]
+                                        File.Copy(destinationFile, Path.Combine(timestampedDirectory, destinationFile));
+                                    }
+
+                                // Copy file
+                                File.Copy(sourceFile, destinationFile, true);
+                            }
+                        }
+                        else
+                        {
+                            // Copy new file
+                            File.Copy(sourceFile, destinationFile);
+                        }
                     }
                     catch
                     {
@@ -207,8 +253,8 @@ namespace MultiCopyContro
 
         void WeeklyReleasesPublicDomainWeeklycomToolStripMenuItemClick(object sender, EventArgs e)
         {
-            // Open our public domain website
-            Process.Start("https://publicdomainweekly.com");
+            // Open our website
+            Process.Start("https://publicdomain.is");
         }
 
         void OriginalThreadDonationCodercomToolStripMenuItemClick(object sender, EventArgs e)
@@ -258,7 +304,7 @@ namespace MultiCopyContro
             var aboutForm = new AboutForm(
                 $"About {programTitle}",
                 $"{programTitle} {version.Major}.{version.Minor}.{version.Build}",
-                $"Made for: Contro{Environment.NewLine}DonationCoder.com{Environment.NewLine}Day #272, Week #39 @ September 29, 2021",
+                $"Made for: Contro{Environment.NewLine}DonationCoder.com{Environment.NewLine}Day #342, Week #49 @ December 08, 2021",
                 licenseText,
                 this.Icon.ToBitmap())
             {

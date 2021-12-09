@@ -14,6 +14,12 @@ Targets Microsoft .NET framework v4.5 (Native to Windows 8+)
 
 Notes:
 
+v0.2.0:
+
+- Backup on overwrite.
+
+Day #343, Week #49 @ December 09, 2021
+
 v0.1.0:
 
 - Search pattern for files and folders.
@@ -37,5 +43,5 @@ Thanks & keep on rocking!
 
 ==========
 
-Enjoy weekly releases on the 1st, 7th, 14th and 21st @ [https://publicdomainweekly.com](https://publicdomainweekly.com)
+Enjoy our 100% free releases @ [https://publicdomain.is](https://publicdomain.is)
 
