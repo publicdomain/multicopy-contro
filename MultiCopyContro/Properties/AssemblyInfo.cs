@@ -12,7 +12,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("MultiCopyContro")]
 [assembly: AssemblyDescription("Custom version of Multicopy for user Contro.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("PublicDomainWeekly.com")]
+[assembly: AssemblyCompany("PublicDomain.is")]
 [assembly: AssemblyProduct("MultiCopyContro")]
 [assembly: AssemblyCopyright("Copyright 2021 - Victor L. Senior")]
 [assembly: AssemblyTrademark("publicdomainweekly")]
@@ -28,4 +28,4 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can use the default the Revision and 
 // Build Numbers by using the '*' as shown below:
-[assembly: AssemblyVersion("0.1.0.*")]
+[assembly: AssemblyVersion("0.2.0.*")]

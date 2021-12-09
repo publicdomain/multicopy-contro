@@ -1,4 +1,4 @@
-﻿// <copyright file="AboutForm.cs" company="PUblicDomainWeekly.com">
+﻿// <copyright file="AboutForm.cs" company="PublicDomain.is">
 //     CC0 1.0 Universal (CC0 1.0) - Public Domain Dedication
 //     https://creativecommons.org/publicdomain/zero/1.0/legalcode
 // </copyright>
